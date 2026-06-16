@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\centerline{\Large\bf Math Reference}\par
+\bigskip
+
+\section{Inline Math}
+
+Use dollar signs for inline math: $a^2 + b^2 = c^2$.
+Subscripts and superscripts: $x_i$, $x^2$, $x_i^2$.
+Common constants: $\pi$, $e$, $\infty$.
+
+\section{Display Math}
+
+Use \texttt{equation} for numbered display math:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+Use \texttt{equation*} (or \texttt{\$\$...\$\$}) to suppress numbering:
+\begin{equation*}
+    \int_0^\infty e^{-x^2}\, dx = \frac{\sqrt{\pi}}{2}
+\end{equation*}
+
+\section{Fractions and Roots}
+
+\begin{equation*}
+    \frac{a}{b} \qquad \frac{x^2 + 1}{2x - 3} \qquad \sqrt{x} \qquad \sqrt[3]{x}
+\end{equation*}
+
+\section{Sums, Products, Integrals}
+
+\begin{equation*}
+    \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+    \qquad
+    \prod_{i=1}^{n} i = n!
+    \qquad
+    \int_a^b f(x)\, dx
+\end{equation*}
+
+\section{Limits}
+
+\begin{equation*}
+    \lim_{x \to 0} \frac{\sin x}{x} = 1
+    \qquad
+    \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e
+\end{equation*}
+
+\section{Common Symbols}
+
+Relational: $\leq$, $\geq$, $\neq$, $\approx$, $\equiv$, $\propto$ \\
+Set notation: $\in$, $\notin$, $\subset$, $\subseteq$, $\cup$, $\cap$, $\emptyset$ \\
+Arithmetic: $\pm$, $\mp$, $\times$, $\div$, $\cdot$ \\
+Logic: $\forall$, $\exists$, $\neg$, $\land$, $\lor$, $\Rightarrow$, $\Leftrightarrow$
+
+\section{Aligned Equations}
+
+Use \texttt{align*} to align multiple equations at \texttt{\&}:
+\begin{align*}
+    f(x)  &= x^2 + 2x + 1 \\
+          &= (x + 1)^2
+\end{align*}
+
+\section{Matrices}
+
+\begin{equation*}
+    A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
+    \qquad
+    B = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+\end{equation*}
+
+\end{document}
