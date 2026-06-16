@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolor}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+  backgroundcolor=\color{backcolor},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  captionpos=b,
+  numbers=left,
+  numbersep=5pt,
+  showstringspaces=false,
+  tabsize=2,
+  language=Java
+}
+
+\begin{document}
+
+\centerline{\Large\bf Java Code Reference}\par
+\bigskip
+
+A basic Java class with a \lstinline{main} method:
+
+\begin{lstlisting}
+public class Hello {
+    public static void main(String[] args) {
+        String message = "Hello, World!";
+        System.out.println(message);
+
+        // Loop example
+        for (int i = 0; i < 5; i++) {
+            System.out.println("i = " + i);
+        }
+    }
+}
+\end{lstlisting}
+
+Inline: use \lstinline{System.out.println()} to print to stdout.
+
+\end{document}
