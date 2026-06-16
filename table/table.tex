@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+
+\usepackage{booktabs}
+\usepackage{caption}
+
+\begin{document}
+
+\centerline{\Large\bf Table Reference}\par
+\bigskip
+
+\section{Basic Booktabs Table}
+
+Use \texttt{toprule}, \texttt{midrule}, and \texttt{bottomrule} from the \texttt{booktabs} package for clean, professional tables.
+
+\begin{table}[h!]
+    \centering
+    \caption{Sample data table}
+    \label{tab:sample}
+    \begin{tabular}{lcc}
+        \toprule
+        Name   & Value & Unit  \\
+        \midrule
+        Alpha  & 1.23  & m/s   \\
+        Beta   & 4.56  & m/s   \\
+        Gamma  & 7.89  & m/s   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Table \ref{tab:sample} shows how to reference a table by its label.
+
+\section{Multi-column Header}
+
+Use \texttt{\textbackslash multicolumn} to span columns.
+
+\begin{table}[h!]
+    \centering
+    \caption{Multi-column header example}
+    \begin{tabular}{lcccc}
+        \toprule
+        & \multicolumn{2}{c}{Group A} & \multicolumn{2}{c}{Group B} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        Item & Min & Max & Min & Max \\
+        \midrule
+        X & 1 & 5 & 2 & 6 \\
+        Y & 3 & 7 & 4 & 8 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\end{document}
