@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{references.bib}
+
+\begin{document}
+
+\centerline{\Large\bf Bibliography Reference}\par
+\bigskip
+
+\section{Inline Citations}
+
+Use \texttt{\textbackslash parencite} for a parenthetical citation: \parencite{knuth1984}.
+
+Use \texttt{\textbackslash textcite} when the author is part of the sentence:
+\textcite{lamport1994} introduced a document preparation system widely used today.
+
+You can also cite online sources \parencite{wikipedia-latex} or books \parencite{goossens1993}.
+
+Multiple citations can be grouped: \parencite{knuth1984,lamport1994}.
+
+\section{Works Cited}
+
+The bibliography is printed below with \texttt{\textbackslash printbibliography}.
+
+\printbibliography
+
+\end{document}

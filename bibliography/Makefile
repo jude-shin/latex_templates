@@ -2,37 +2,22 @@ SHELL = /bin/sh
 PDFLATEX = pdflatex
 BIBER = biber
 
-# Name of the report file
-MAIN = report
+MAIN = bibliography
+TEXFILES = $(MAIN).tex
+BIBFILES = references.bib
 
-# Latex file that will be compiled
-TEXFILES = $(MAIN).tex 
-# References file if you use biber
-BIBFILES = references.bib 
+.PHONY: all bib clean allclean
 
-# Put any images/assets you reference in here
-ASSETS = assets/*
+all: bib
 
-
-
-.PHONY: all pdf bib clean allclean
-
-all: pdf
-
-pdf: $(TEXFILES) $(BIBFILES) $(ASSETS)
-	$(PDFLATEX) $(MAIN)
-	$(PDFLATEX) $(MAIN)
-
-bib: $(TEXFILES) $(BIBFILES) $(ASSETS)
+bib: $(TEXFILES) $(BIBFILES)
 	$(PDFLATEX) $(MAIN)
 	$(BIBER) $(MAIN)
 	$(PDFLATEX) $(MAIN)
 	$(PDFLATEX) $(MAIN)
 
 clean:
-	rm -f *.log *.aux *.out *.bcf *.bbl *.blg *.xml *.toc *.run.xml 
+	rm -f *.log *.aux *.out *.bcf *.bbl *.blg *.xml *.toc *.run.xml
 
 allclean: clean
 	rm -f $(MAIN).pdf
-
-
