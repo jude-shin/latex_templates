@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\centerline{\Large\bf Hyperlinks Example}\par
+\bigskip
+
+\section{External Links}
+
+Link with custom text: \href{https://www.google.com}{Google}.
+
+Bare URL displayed as-is: \url{https://www.archlinux.org}.
+
+Email link: \href{mailto:example@example.com}{example@example.com}.
+
+\section{Internal Links}
+
+Jump to Section \ref{sec:target} using \texttt{\textbackslash ref}.
+
+You can also use \hyperref[sec:target]{a custom label} with \texttt{\textbackslash hyperref}.
+
+\section{Target Section}
+\label{sec:target}
+
+This is the section linked to above.
+
+\end{document}
