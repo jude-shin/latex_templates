@@ -1,7 +1,7 @@
 SHELL = /bin/sh
 PDFLATEX = pdflatex
 
-MAIN = report
+MAIN = general
 TEXFILES = $(MAIN).tex
 
 .PHONY: all pdf clean allclean
